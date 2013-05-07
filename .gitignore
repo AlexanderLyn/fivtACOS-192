@@ -1,0 +1,8 @@
+
+*.xcworkspacedata
+
+.DS_Store
+
+*.xcuserstate
+
+Goncharov_Popov_project/NLServer/NLServer.xcodeproj/xcuserdata/rubik303.xcuserdatad/xcschemes/NLServer.xcscheme
