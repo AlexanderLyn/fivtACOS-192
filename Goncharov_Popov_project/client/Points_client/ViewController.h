@@ -15,8 +15,10 @@
 #include <netdb.h>
 #include <string.h>
 
-@interface ViewController : UIViewController {
-  NSMutableArray *_touches, *_views;
+@interface ViewController : UIViewController <UITextFieldDelegate> {
+  NSMutableArray *_touches;
+  UITextField *ipField;
+  UIButton *connectButton;
   
   //server values
   int socket_descriptor;
@@ -24,6 +26,7 @@
   struct sockaddr_in server;
   char *data_buffer;
   int buf_size;
+  char *server_ip;
 }
 
 @end
