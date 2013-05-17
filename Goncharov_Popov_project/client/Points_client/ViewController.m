@@ -170,9 +170,10 @@
 }
 
 - (void)waitDataFromServer {
-  while (1) {
+  while (socket_descriptor>0) {
     data_buffer = (char *)malloc(200*sizeof(char));
-    int recieve = recv(socket_descriptor, data_buffer, 200, 0);
+    int recieve = 0;
+    recieve = recv(socket_descriptor, data_buffer, sizeof(char)*200, 0);
     if (!data_buffer) return;
     data_buffer[recieve] = 0;
     printf("recieved msg = %s\n", data_buffer);
